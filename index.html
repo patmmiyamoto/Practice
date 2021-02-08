@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="okey.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 500%;
+  margin: 0;
+  font-family: Serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #dea5a4;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #b19cd9;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: }
+#Gallery {background-color: #77dd77;}
+#Community {background-color: #FFE5B4;}
+#Signup {background-color: #AEC6CF;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#ffb347')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Gallery', this, '#77dd77')">Gallery</button>
+<button class="tablink" onclick="openPage('Community', this, '#FFE5B4')">Community</button>
+<button class="tablink" onclick="openPage('Signup', this, '#AEC6CF')">Sign up</button>
+
+</style>
+</head>
+<div id="Home" class="tabcontent">
+<style>
+
+#welcome-section
+  :root {
+    --penguin-size: 400px;
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 200px) {
+    :root {
+      /* Only change code below this line */
+
+      /* Only change code above this line */
+    }
+  }
+
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 5s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://st4.depositphotos.com/3146979/20504/v/600/depositphotos_205041434-stock-video-abstract-animated-stained-background-seamless.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  background-attachment: fixed; 
+  position: relative;
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+</style>
+
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+
+
+<h1 style="text-align:center; font-family:brush script mt; font-size:500%; color:black;">Welcome to my Website!</h1>
+<p style="text-align:center; font-family:verdana; color:black;">This is my creative outlet for sharing all manner of blogs, travel, and some of my works. This website is still under construction, so there might be some errors in my code. But there still some to see, so keep browsing! </p>
+
+<h1 style="background-color:powderblue; text-align:center; font-family:cursive; color:black; ">Keep in touch with me at:</h1>
+<p style="text-align:center; font-family:sans-serif; color:black;">Facebook: <a href="https://www.facebook.com/justcallmeRiUniverse/">Pat Miyamoto Maglaya</a></p>
+<p style="text-align:center; font-family:sans-serif; color:black;">Instagram: <a href="https://www.instagram.com/psychopaaaatt/">@psychopaaaatt</a></p>
+<p style="text-align:center;font-family:sans-serif; color:black;">Snapchat: <a href="https://www.snapchat.com/add/patsupnet28">patsupnet28</a></p>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h1 style="background-color:#ffd1dc; text-align:center; font-family:cursive; color:black; ">Know more</h1>
+
+<div class="card">
+  <img src="https://lh3.googleusercontent.com/FaEufZQ1KrLs3LjCZlpqs3MRTkGjGLrmA6j79631vIQy2URZlRYYyMWna35-ioStUa_GyrnErppx5sMi4KHNJ-wyp3GxK2OSgaSX4QVk14sBjKwn9EIsZmnQWdv9AfXIvzmr2MOf6LrSFjsWuX1_Vz-dj4psx7j7XOPdHzIgbuJ_EHMChnKsJXv1vEIJzC-PfAxSxtB3qdmcMDws-8VYNJHPFRQH8Fb4sXZramx_wyxMkQHoRdinm0AdnX18zYAGsaBVvhLeK2CNnLiHPsdlA4x4AwvqJ6LYYWzhJr_5NN0vY2u3uQ35nlrx4QqHiKd34LdqbRIz5BxgsAOSRQOw8KSmu9ReOF4MmFPtctt1CAGRvG34PSBle_Cm_stcfIluY6VCqELY-Jz3Dbr7RoZg5loCcDPMrssfqN_WwbVDnbtJRDG2AsE3JoM7tme9yAfs1sRaVbqrjaqjkFf4pmEWmZxFbA-8T366m00k771VjZSnGpfe2P0uT6ll9etMtKfGKl_QQEOafFkvybe7Ij8eRnpir4_K1YBDByMN2J_ZiHA9XmupJEDGdFP5XiIikqiyYtL7y13rO3ik9H9_U_OzD-o6spKVVclmbN40mqdBRb0b7JyLbB2adoj887kb6MY_w-U7o9ltZfPRB2F2vaoTk6jdF7VwYL4uD_a3RROCMv44PX3gMy0mXIdOOkH8=w522-h695-no?authuser=0" alt="Pat" style="width:100%">
+  <h1 style="color: black;">Pat Miyamoto</h1>
+  <p style="color: black;" class="title">Creator</p>
+  <p style="color: black;">University of the Cordilleras '22</p>
+  <div style="margin: 24px 0;">
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+
+
+
+
+
+</div>
+
+<div id="Gallery" class="tabcontent">
+
+<h1 style="background-color:#ff6961; text-align: center; font-family: brush script mt;">Images</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<h1 style="background-color:pink; text-align:center; font-family: brush script mt;">A&R Nuptial</h1>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://by3301files.storage.live.com/y4pyCprU0b2XO7DM_Lb_6g98diKxa8CajNcwM0w2up2B8S9plVbIK9RpuRf_caqqZcWOCyWfwKyt-Y0LfRlkpuxX5KE2l8llmisqyLEFV6bQuZoG22oe7eJ6LO4rnf-gvtyoddpF2-NH43slZ963F4B3zqxbdT2Wh_CAY1yEZGTMoLNJYEEOjdbIF8A6HUazTSg_ca4jD_tQGtC-2t58oQySkbMIsyqKMFoOlBB1ORhQV4/DSC_0432.JPG?psid=1&width=983&height=655" style="width:100%">
+  <div class="text">A&R</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://by3301files.storage.live.com/y4pZ5_vxPUwWav8p_6-Hj3TxkLg7LTgFtm8g3e9GN30fs0ax_wS3APWCIb1F47fOJX_zX3BthHGbVodo3VoT_fieEn7WJ1_E08SukwbHugg9K0Q8j_kekOmCXKH4fdRdSGUEt6YSkBdYj-yW0M82h6ay916dpEzP9j5YJrfKlX1mtBw68ZN0uZslG-6G8UikLpd2CMJ5P0QrxM0idxcPx7du_Ekq52PsBfG9wB3Ll0iDuA/DSC_0431.JPG?psid=1&width=983&height=655" style="width:100%">
+  <div class="text">A&R </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://by3301files.storage.live.com/y4pC1rxtkHPsZ5NkadelMMcsvvEH66CEFPqQ1BAk0Zs-xX658bBbthKezrhGCgkQJaO2mfd1l9Op0czLpHNfsS11ECG3rvApDNcaFB_Q-loa8Rq9UdCC4HWMPhixAzHM9TcGtl5x-N6FDkagZkGsS4OtrFFpDHJpwO6qxOVZgTEO6yAKznHXKrnHHfnOkfCWpUXNC92Ix8tpage-qfChbdF2DYwS9zy3XQeiH-ixKZJe6A/DSC_0239.JPG?psid=1&width=983&height=655" style="width:100%">
+  <div class="text">A&R</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
+
+
+<h1 style="background-color:pink; text-align:center; font-family: brush script mt;">A&R Nuptial Photos</h1>
+<img src="https://by3301files.storage.live.com/y4mQtqsoewnF4gyA-9Jz0T8PPs7pHfJSh_sqER91H1zVEvLC3KBl9TKmfyMUKpBrE1QEIRcez6jjRsmZUeKPSL8RbDlxbF7voSXNdg5lzFVYxfHLQaArr1c3c0cveCp-E8o59h4lC890tbFX4oBJ2wGgHNC9cJKZvtsUKH_kQYYNkSmFxEbuUKQSjerN1R5-u0J?width=660&height=439&cropmode=none" width="650" height="429" />
+<img src="https://by3301files.storage.live.com/y4mksqYFuezCNXEAiSNBX5iqDUIRfAweJAFVN5Xd3BfRfX1TAIOJuK8PaEGltbIXz9XD19IHjPtxcaUZCo9YIUKr5duEsSiFocz_KlpSO9WGLRKW4DaWCKMnKqh8517gAZmAQeW8PhTUem3J8mnUoPIEfXv4_wZfk56Gl2nbCIWHdnAvUUaZB0colEpvXE6S7V5?width=655&height=434&cropmode=none" width="650" height="429" ; />
+<img src="https://by3301files.storage.live.com/y4mRqXCnDJXxsx0_OACakOCfaJ2152FR48H1iIgQ9iyaXSddmZWqu_aLna-2pkKEtKW5OQE6sqgNxe6VEYLELrUJojTPHB0AoHxpvg4KCMKv0M1vRy1CXfW9xbYey9UHWC9tNPraooNmi7G5oWQUYgCOMR0n-VTGNxVttbEN1gRms2Yq2wnJKRXUXDT_6YH44KX?width=256&height=170&cropmode=none" width="256" height="170" />
+<img src="https://by3301files.storage.live.com/y4m2OS9TtomLeQUu6x3GLvue3C4qiSb_WPLaB37LBDDbahzlaHElQVgjJ0UQpBO_u01wSaGuCg3bb8vU0zFVMVeceapDt8JeA0rzyE_Bqbrsh83VbRmISoUXsptreex29PKJaAUOpS3uF6ca_vA_mFpg012JUIO2v_NGgCF9JMIajV5THvfqqb1-9AnJApNhmyZ?width=256&height=170&cropmode=none" width="256" height="170" />
+<img src="https://by3301files.storage.live.com/y4mIPxt-JCdXhUpUfYznWuN01W5NIzm89wsDBpmb5Q1neManVuFTQetaQYxx6YrCupSLP-1OFl7n_L2BJ58M819ZvFtnaHHUbJUotaxSoaIV-hLzNuIw309oIYgKw23S3iWXH4WXw5rZJ99nHr4xwCyQ84GALbur1mRb5CeYBCQ8_QUp2Ln__TRjO9IKFnEuEfs?width=256&height=170&cropmode=none" width="256" height="170" />
+<img src="https://by3301files.storage.live.com/y4mOe90ZcgZRHAv1u6EZdAf-tQ7k8Z4oInze9fZxAraSOxVrEkoTcMOVD0ucMow3Ed-kek0GMjiKt8MLe1DQ1_CqGpG8PWAzlk6hoJfHDJ-9fn_5Y-TV6vqQSsw81302hz2U9Zw0OA9f1kgZkaavA40S4RB3mRphq9LEDtyD8Qy3TEDlGF0TLfmBvzgizfxeVWO?width=256&height=170&cropmode=none" width="256" height="170" />
+<img src="https://by3301files.storage.live.com/y4m4onCfQ55GJ0on8DP48jsZBaiYQr2mOCkTXX9DL5k6LzNvUCulgSGyN3r-7y0cUIN2EM-lDq6uOgepqFERHnwquty2OE0MFA8uO41P3z4yoK4ygAthWgOf83YVZhS-fiYXOTp4xdnAW-q74Hc4T9IHaOMzc9vKCth2UYY3kQHE92Smy9n4KfvsXhZeyzcliLr?width=256&height=170&cropmode=none" width="256" height="170" />
+<h1 style="background-color:pink;text-align:center; font-family: brush script mt;">See more here</h1>
+<iframe src="https://onedrive.live.com/embed?cid=8E32A5391B087198&resid=8E32A5391B087198%21594&authkey=ADseXjbwZcV4KC0" width="165" height="128" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://onedrive.live.com/embed?cid=8E32A5391B087198&resid=8E32A5391B087198%21650&authkey=AAX3DgWIzUnzZF0" width="165" height="128" frameborder="0" scrolling="no"></iframe>
+<p style="text-align:center; float: right; font-family: cursive;" >To download, on your computer, select an image, right-click, and click on save image as.</p>
+
+
+
+<h1 style="background-color:#ff6961; text-align: center; font-family: brush script mt;">Videos</h1>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="background-color:pink; text-align: center; font-family: brush script mt;">A&R Wedding Highlight</h1>
+
+<div class="your-centered-div">
+<iframe width="853" height="480" src="https://www.youtube.com/embed/6h17G8LM9CE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>">
+</iframe>
+</div>
+<h1 style="background-color:powderblue; text-align:center; font-family: brush script mt;">GAS-C Film Festival</h1>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/9R0UjmsLNaI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1 style="background-color:powderblue; text-align:center; font-family: brush script mt;">Jam @ 18</h1>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/7yVrq9lNg6I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
+
+</div>
+
+<div id="Community" class="tabcontent">
+  <!--Begin Website Toolbox Forum Embed Code-->
+<div id="wtEmbedCode"><script type="text/javascript" id="embedded_forum" src="https://yowriri1973.discussion.community/js/mb/embed.js"></script>
+<noscript><a href="https://yowriri1973.discussion.community/">Pingu</a></noscript></div>
+<!--End Website Toolbox Forum Embed Code-->
+
+
+
+</div>
+<div id="Signup" class="tabcontent">
+<iframe src="https://app.acuityscheduling.com/schedule.php?owner=21790286" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+</div>
+</div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+
+
+
+
